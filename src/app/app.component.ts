@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
-import { log } from 'console';
 
 @Component({
   selector: 'app-root',

@@ -2,38 +2,31 @@
   <div class="card shadow-sm" style="width: 400px;">
     <div class="card-body">
       <h5 class="card-title text-center">Template Driven Form</h5>
-      <!-- Template-driven form -->
       <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" #nameInput="ngModel"
             required>
-          <!-- Error message for name validation -->
           <div *ngIf="nameInput.invalid && nameInput.touched" class="text-danger">
             Please enter your name.
           </div>
         </div>
-
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" #emailInput="ngModel"
             required>
-          <!-- Error message for email validation -->
           <div *ngIf="emailInput.invalid && emailInput.touched" class="text-danger">
             Please enter a valid email.
           </div>
         </div>
-
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password"
             #passwordInput="ngModel" required>
-          <!-- Error message for password validation -->
           <div *ngIf="passwordInput.invalid && passwordInput.touched" class="text-danger">
             Password is required.
           </div>
         </div>
-
         <button type="submit" class="btn btn-primary w-100" [disabled]="userForm.invalid">Submit</button>
       </form>
     </div>
