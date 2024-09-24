@@ -18,7 +18,7 @@ export class AppComponent {
 
   onSubmit(data: NgForm) {
     if (data.valid) {
-      console.log(data.value);
+      console.log('values', data.value);
     }
   }
 }
